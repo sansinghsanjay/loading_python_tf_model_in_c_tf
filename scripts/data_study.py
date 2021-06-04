@@ -16,6 +16,7 @@ from itertools import repeat
 # constants
 DIR_NAME = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 TRAIN_FILES_PER_CLASS = 3500
+VAL_FILES_PER_CLASS = 200
 
 # paths
 train_source_path = "/home/sansingh/Downloads/DATASET/mnist/trainingSet/"
@@ -47,8 +48,8 @@ for dir_name in tqdm(DIR_NAME):
 	random.shuffle(files)
 	train_filenames.extend(files[:TRAIN_FILES_PER_CLASS])
 	train_labels.extend(repeat(dir_name, TRAIN_FILES_PER_CLASS))
-	val_filenames.extend(files[TRAIN_FILES_PER_CLASS:])
-	val_labels.extend(repeat(dir_name, len(files[TRAIN_FILES_PER_CLASS:])))
+	val_filenames.extend(files[TRAIN_FILES_PER_CLASS : TRAIN_FILES_PER_CLASS + VAL_FILES_PER_CLASS])
+	val_labels.extend(repeat(dir_name, len(files[TRAIN_FILES_PER_CLASS : TRAIN_FILES_PER_CLASS + VAL_FILES_PER_CLASS])))
 print()
 
 # making dataframe and saving data
