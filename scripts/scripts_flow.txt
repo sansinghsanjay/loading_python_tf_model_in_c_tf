@@ -1,0 +1,1 @@
+1. data_study.py: To see number of images in each class, generating their plots and saving them.
