@@ -1,3 +1,0 @@
-1. data_study.py: To see number of images in each class, generating their plots and saving them.
-2. Since all images are already of dimension (28, 28, 3), hence there is no need to resize (or preprocess) the data.
-3. train.py: To train a simple CNN on the given data.
