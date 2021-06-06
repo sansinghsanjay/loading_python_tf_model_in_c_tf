@@ -1,3 +1,3 @@
-# Loading a model trained in Python-Tensorflow, in C-Tensorflow
+# Python Tf.keras model for MNIST Hand Written Digits
 
 Refer readme.pdf or readme.ppt for more detail
